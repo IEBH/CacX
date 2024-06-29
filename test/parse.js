@@ -48,4 +48,16 @@ describe('cacx.parse()', ()=> {
 		})
 	)
 
+	it('simple inputs - attributes', ()=>
+		expect(parse('<tag a=1 b="text" c>text</tag>')).to.deep.equal({
+			tag: 'tag',
+			text: 'text',
+			attrs: {
+				a: 1,
+				b: 'text',
+				c: true,
+			},
+		})
+	)
+
 });
