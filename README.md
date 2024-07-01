@@ -69,3 +69,24 @@ import {parseFile} from '@iebh/cacx';
 
 parseFile('./file.xml') //= `{tag: 'a', children: ...}`
 ```
+
+
+parseCollectionFile(path, tags, options)
+----------------------------------------
+Helper to stream a file and run a callback when a named tag closes.
+
+```javascript
+import {parseCollectionFile} from '@iebh/cacx';
+
+parseCollectionFile(
+    './file.xml',
+    {
+        record(node) {
+            // Node should represent the state of any `record` element within the XML
+        },
+    },
+    { // Other options
+        flatten: true, // Try to flatten the output into a logical JavaScript object
+    },
+);
+```

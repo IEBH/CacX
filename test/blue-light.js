@@ -1,5 +1,6 @@
 import {expect} from 'chai';
 import parseFile from '#lib/parseFile';
+import parseCollectionFile from '#lib/parseCollectionFile';
 
 describe('cacx.parse() + blue-light.xml', ()=> {
 
@@ -24,6 +25,25 @@ describe('cacx.parse() + blue-light.xml', ()=> {
 		});
 		expect(value).to.have.nested.property('xml.records');
 		expect(value.xml.records).to.be.an('array');
+	});
+
+	it.only('parse blue-light XML as a collection', async ()=> {
+		let refs = [];
+
+		await parseCollectionFile(
+			'./test/data/blue-light.xml',
+			{
+				record(ref) {
+					console.log('REF!', {ref});
+					refs.push(ref);
+				},
+			},
+			{
+				flatten: true,
+			},
+		);
+
+		expect(refs).to.have.length.above(0);
 	});
 
 });
