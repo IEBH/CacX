@@ -13,7 +13,7 @@
   "exports": {
     ".": "./lib/CacxParser.js",
     "CacxParser": "./lib/CacxParser.js",
-    "./parse": "./lib/*.js"
+    "./*": "./lib/*.js"
   },
   "keywords": [
     "xml",
