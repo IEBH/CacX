@@ -36,6 +36,13 @@ This function should be called at least once prior to `value()`.
 Returns the CacxParser instance.
 
 
+flatten()
+---------
+Process the current stack into a logical do-the-right-thing data structure.
+See the various `settings.flatten*` options to configure the behaviour here.
+Returns the CacxParser instance.
+
+
 CacxParser.value()
 ------------------
 Returns the parsed XML stack.
@@ -51,4 +58,14 @@ Simple all-in-one string parser helper.
 import {parser} from '@iebh/cacx';
 
 parse('<a><b><c>Hello World</c></b></a>') //= `{tag: 'a', children: ...}`
+```
+
+parseFile(path, options)
+------------------------
+Helper for streaming file inputs into the parser.
+
+```javascript
+import {parseFile} from '@iebh/cacx';
+
+parseFile('./file.xml') //= `{tag: 'a', children: ...}`
 ```
