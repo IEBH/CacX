@@ -1,6 +1,6 @@
 {
   "name": "@iebh/cacx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Intentionally simple XML parser designed for minimal dependency and speed",
   "scripts": {
     "lint": "eslint .",
