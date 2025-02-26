@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@momsfriendlydevco/eslint-config": "^2.1.2",
-    "chai": "^5.1.1",
+    "chai": "^5.2.0",
     "eslint": "^9.21.0",
-    "mocha": "^10.5.2"
+    "mocha": "^11.1.0"
   }
 }

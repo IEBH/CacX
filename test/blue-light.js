@@ -34,7 +34,6 @@ describe('cacx.parse() + blue-light.xml', ()=> {
 			'./test/data/blue-light.xml',
 			{
 				record(ref) {
-					console.log('REF!', {ref});
 					refs.push(ref);
 				},
 			},
