@@ -12,7 +12,7 @@
   },
   "exports": {
     ".": "./lib/CacxParser.js",
-    "CacxParser": "./lib/CacxParser.js",
+    "./CacxParser": "./lib/CacxParser.js",
     "./*": "./lib/*.js"
   },
   "keywords": [
